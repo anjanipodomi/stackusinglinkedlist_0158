@@ -30,41 +30,38 @@ public:
 		cout << "Push value: " << value << endl;
 		return value;
 	}
-};
 
-void pop() {
-	{
+	void pop() {
 		if (isEmpty())
 		{
 			cout << "Stack is empty." << endl;
-			return;
 		}
-		cout << "Popped value: " << top -> data << endl;
+		cout << "Popped value: " << top->data << endl;
 		top = top->next;
 	}
-}
 
-void peek() {
-	if (top == NULL)
-	{
-		cout << "List is empty." << endl;
-	}
-	else {
-		Node* current = top;
-		while (current != NULL)
+	void peek() {
+		if (top == NULL)
 		{
-			cout << current->data << " " << endl;
-			current = current->next;
+			cout << "List is empty." << endl;
 		}
-		cout << endl;
+		else {
+			Node* current = top;
+			while (current != NULL)
+			{
+				cout << current->data << " " << endl;
+				current = current->next;
+			}
+			cout << endl;
+		}
 	}
-}
 
-bool isEmpty()
-{
-	return top == NULL;
-}
+	bool isEmpty()
+	{
+		return top == NULL;
+	}
 
+};
 int main()
 {
 	stack stack;
@@ -95,6 +92,22 @@ int main()
 				cout << "Stack is empty. Cannot pop" << endl;
 			}
 			break;
+		case 3:
+			if (!stack.isEmpty()) {
+				stack.peek();
+			}
+			else {
+				cout << "Stack is empty. No top value" << endl;
+			}
+			break;
+		case 4:
+			cout << "Exiting program." << endl;
+			break;
+		default:
+			cout << "Invalid choice. Try again." << endl;
+			break;
 		}
+		cout << endl;
 	}
+	return 0;
 }
