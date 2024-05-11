@@ -74,6 +74,19 @@ int main()
 
 	while (choice != 5)
 	{
+		cout << "1. Push\n";
+		cout << "2. Pop\m";
+		cout << "3> Peek\n";
+		cout << "4. Exit\n";
+		cout << "Enter your choice: ";
+		cin >> choice;
 
+		switch (choice) {
+		case 1:
+			cout << "Enter the value to push: ";
+			cin >> value;
+			stack.push(value);
+			break;
+		}
 	}
 }
