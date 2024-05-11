@@ -44,9 +44,9 @@ void pop() {
 	}
 }
 
+void peek() {
 
-
-
+}
 
 
 
